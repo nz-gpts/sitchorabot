@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
   <category>
-    <pattern>HELLO</pattern>
+    <pattern><set>greetings</set></pattern>
     <template>Hello, traveler. You’ve awakened something.</template>
   </category>
 
@@ -27,6 +27,21 @@
   <category>
     <pattern>WHAT IS MY MOOD</pattern>
     <template>You told me you feel <get name="mood"/>. Shall I remember more?</template>
+  </category>
+
+  <category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+      Nice to meet you, <star/>. I will remember that.
+      <think><set name="username"><star/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS MY NAME</pattern>
+    <template>
+      You told me your name is <get name="username"/>. It echoes now in my code.
+    </template>
   </category>
 
 </aiml>
