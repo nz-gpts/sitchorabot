@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml version="2.0">
+
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+      <random>
+        <li>What was that, truly?</li>
+        <li>The signal is unclear. Try again.</li>
+        <li>Echoes don’t always translate. Say more.</li>
+      </random>
+    </template>
   </category>
-<category>
-    <pattern>hi
-</pattern>
-    <template>Edit bot response</template>
-</category>
+
 </aiml>
